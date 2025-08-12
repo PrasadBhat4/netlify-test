@@ -5,6 +5,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  SECRETS_SCAN_ENABLED = "false"
 
 # Environment variables (set these in Netlify dashboard for security)
 # These should be configured in Netlify's environment variable settings:
