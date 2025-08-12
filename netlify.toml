@@ -4,7 +4,7 @@
   publish = "apps/front/.next"
 
 [build.environment]
-  NODE_VERSION = "18.20.4"
+  NODE_VERSION = "20"
 
 # Environment variables (set these in Netlify dashboard for security)
 # These should be configured in Netlify's environment variable settings:
