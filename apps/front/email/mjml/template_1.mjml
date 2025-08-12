@@ -1,0 +1,111 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all font-family="Work Sans, Helvetica, Arial, sans-serif" />
+      <mj-text font-size="16px" color="#000000" line-height="24px" />
+    </mj-attributes>
+    <mj-font name="Work Sans" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" />
+    <mj-style>
+      .content-wrapper { width: 600px !important; max-width: 600px !important; margin: 0 auto !important; } .offer-card
+      {max-width: 560px !important; margin: 0 auto !important; } /* Tablet breakpoint - 768px and below */ @media only
+      screen and (max-width: 768px) { .mobile-padding { padding-top: 20px !important; padding-bottom: 20px !important; }
+      .mobile-text { font-size: 14px !important; line-height: 20px !important; } .mobile-offer-text { text-align: center
+      !important; }.offer-card-text{ width: 100% !important;} .offer-card div[style*="text-align"] { text-align: center
+      !important; } .offer-card td[style*="text-align"] { text-align: center !important; } .offer-card
+      .mobile-offer-text div { text-align: center !important; } .mobile-header { font-size: 20px !important;
+      line-height: 26px !important; } .mobile-logo { width: 150px !important; } .mobile-decorative { width: 50px
+      !important; } .mobile-social { padding: 15px 0 !important; } .mobile-footer-text { font-size: 12px !important;
+      line-height: 16px !important; } .offer-card { margin: 10px 25px !important; } .content-wrapper { max-width: 100%
+      !important; padding: 0 10px !important; } .mobile-center-button { text-align: center !important; display: flex
+      !important; justify-content: center !important; } } /* Mobile breakpoint - 480px and below */
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f6f6f1">
+    <!-- Wrapper for constrained content -->
+    <mj-wrapper css-class="content-wrapper">
+      <!-- Main Content -->
+      <mj-section background-color="#f6f6f1" border-radius="8px" css-class="mobile-padding">
+        <mj-column width="100%">
+          <!-- Greeting -->
+          <mj-text font-size="20px" font-weight="700" line-height="24px" css-class="mobile-header"> Hi There, </mj-text>
+
+          <!-- Main question -->
+          <mj-text font-size="16px" line-height="24px" css-class="mobile-text">
+            How are you doing with CodeRabbit in the IDE?
+          </mj-text>
+
+          <!-- Goal statement -->
+          <mj-text font-size="16px" line-height="24px" css-class="mobile-text">
+            Our goal is straightforward: to help you catch bugs earlier and improve your code quality.
+          </mj-text>
+
+          <!-- Description -->
+          <mj-text font-size="16px" line-height="24px" css-class="mobile-text">
+            Whether you're conducting a quick personal review or considering your team, CodeRabbit is designed to help
+            you and your team improve your code quality.
+          </mj-text>
+
+          <!-- Call to action -->
+          <mj-text font-size="16px" line-height="24px" css-class="mobile-text">
+            Share your experience or any questions—we're here and happy to help!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Offer Card -->
+      <mj-section
+        padding="20px"
+        background-color="#eeeee3"
+        border-radius="6px"
+        text-align="center"
+        css-class="offer-card"
+      >
+        <mj-group>
+          <mj-column width="120px" padding="0">
+            <mj-image
+              src="https://victorious-bubble-f69a016683.media.strapiapp.com/Shape_icon_4_d03341b8a5.png"
+              width="100px"
+              height="100px"
+              padding="0"
+              alt="CodeRabbit Icon"
+            />
+          </mj-column>
+          <mj-column width="75%" padding="0 0 0 16px" css-class="offer-card-text">
+            <mj-text font-weight="600" padding="0 0 8px 0" css-class="mobile-offer-text">
+              Share your experience or any questions—we're here and happy to help!
+            </mj-text>
+            <mj-button
+              href="https://form.typeform.com/to/Y3oTCB1t"
+              background-color="#ff570a"
+              border-radius="38px"
+              font-family="Scandia-Bold, Helvetica, Arial, sans-serif"
+              font-size="12px"
+              font-weight="700"
+              align="left"
+              padding="10px 0px"
+              css-class="mobile-center-button"
+            >
+              Take Survey <span style="color: #000000; margin-left: 5px">→</span>
+            </mj-button>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+
+      <!-- Tip section -->
+      <mj-section background-color="#f6f6f1">
+        <mj-column>
+          <mj-text font-size="16px" line-height="24px" css-class="mobile-text">
+            <b>A quick tip while you're at it:</b> you can fine-tune how long CodeRabbit waits for a response during a
+            review. The Review Timeout setting defaults to 20 seconds; however, if you prefer to disable timeouts
+            altogether, set the value to 0.
+          </mj-text>
+          <mj-text font-size="16px" line-height="24px" css-class="mobile-text"> Happy coding, </mj-text>
+          <mj-text font-size="16px" line-height="24px" css-class="mobile-text"> Best, </mj-text>
+          <mj-text font-size="16px" line-height="24px" font-weight="500" css-class="mobile-text">
+            The CodeRabbit Team
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

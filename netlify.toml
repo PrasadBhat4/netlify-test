@@ -1,0 +1,123 @@
+[build]
+  base = "apps/front"
+  command = "cd ../.. && yarn install && yarn build"
+  publish = "apps/front/.next"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "8.19.2"
+
+# Environment variables (set these in Netlify dashboard for security)
+# These should be configured in Netlify's environment variable settings:
+# NEXT_PUBLIC_BASE_URL = "https://your-site-name.netlify.app"
+# NEXT_PUBLIC_STRAPI_BASE_URL = "https://phenomenal-purpose-7c77e8a0b7.strapiapp.com"
+# NEXT_PUBLIC_HASHNODE_GQL_ENDPOINT = "https://gql.hashnode.com"
+# NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST = "engineering.hashnode.com"
+# NEXT_PUBLIC_GA_ID = "G-ZNFMECQD2S"
+# NEXT_PUBLIC_GTM_ID = "G-PS8NDCE2RY"
+# NEXT_PUBLIC_HUBSPOT_PORTAL_ID = "43613284"
+# NEXT_PUBLIC_HUBSPOT_FORM_GUID = "65234f94-1d9f-43b1-905b-a17a76adff06"
+# NEXT_PUBLIC_HUBSPOT_CONTACT_FORM_GUID = "39e2a774-ac62-48dc-9c61-023d66f6365c"
+# NEXT_PUBLIC_HUBSPOT_CONTACT_SUPPORT_FORM_GUID = "39e2a774-ac62-48dc-9c61-023d66f6365c"
+# NEXT_PUBLIC_HUBSPOT_STARTUP_FORM_GUID = "b5a51804-c951-43c1-b4e1-3feb6653ab86"
+# NEXT_PUBLIC_HUBSPOT_SOC_FORM_GUID = "6685a189-0199-4ee4-af48-c26353088fee"
+# NEXT_PUBLIC_HUBSPOT_GDPR_FORM_GUID = "a44afddc-3cdd-48e1-92c5-a73166b24946"
+# NEXT_PUBLIC_HUBSPOT_PARTNERSHIP_FORM_GUID = "f2ed33a4-703c-4237-b018-f3ea84f37d7c"
+# NEXT_PUBLIC_POSTHOG_HOST = "https://us.i.posthog.com"
+# NEXT_PUBLIC_POSTHOG_KEY = "phc_rVxqbieLRi6Eq3Hq1Ou8adyF9rSXSvEVLGToSlRwyn2"
+# NEXT_PUBLIC_FEATURE_FLAG_TRANSLATION = "true"
+# NEXT_PUBLIC_FEATURE_FLAG_DARK_MODE = "true"
+
+# Handle Next.js rewrites as redirects
+[[redirects]]
+  from = "/integrations/schema.v2.json"
+  to = "https://storage.googleapis.com/coderabbit_public_assets/schema.v2.json"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "https://resources.coderabbit.ai/about"
+  status = 200
+
+[[redirects]]
+  from = "/feed"
+  to = "/api/blog/rss"
+  status = 200
+
+[[redirects]]
+  from = "/gitlabHandler"
+  to = "https://app.coderabbit.ai/gitlabHandler"
+  status = 200
+
+[[redirects]]
+  from = "/jiraHandler"
+  to = "https://app.coderabbit.ai/jiraHandler"
+  status = 200
+
+[[redirects]]
+  from = "/linearHandler"
+  to = "https://app.coderabbit.ai/linearHandler"
+  status = 200
+
+# Handle Next.js redirects
+[[redirects]]
+  from = "/vscode"
+  to = "/ide"
+  status = 301
+
+[[redirects]]
+  from = "/pages/:slug"
+  to = "/:slug"
+  status = 301
+
+[[redirects]]
+  from = "/docs1"
+  to = "https://a8047283.coderabbit-docs.pages.dev"
+  status = 301
+
+[[redirects]]
+  from = "/blog1"
+  to = "https://a8047283.coderabbit-docs.pages.dev/blog"
+  status = 301
+
+[[redirects]]
+  from = "/blog/all"
+  to = "https://www.coderabbit.ai/blog"
+  status = 301
+
+[[redirects]]
+  from = "/changelog"
+  to = "https://docs.coderabbit.ai/changelog"
+  status = 301
+
+[[redirects]]
+  from = "/careers"
+  to = "https://resources.coderabbit.ai/careers"
+  status = 302
+
+# Handle domain redirects (resources subdomain)
+[[redirects]]
+  from = "https://resources.coderabbit.ai/*"
+  to = "https://coderabbit.ai/:splat"
+  status = 301
+  force = true
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  # If you have any serverless functions, configure them here
+  directory = "netlify/functions"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

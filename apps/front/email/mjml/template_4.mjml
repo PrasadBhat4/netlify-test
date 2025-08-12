@@ -1,0 +1,225 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all font-family="Work Sans, Helvetica, Arial, sans-serif" />
+      <mj-text font-size="16px" color="#000000" line-height="24px" />
+    </mj-attributes>
+    <mj-font name="Work Sans" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" />
+    <mj-style>
+      .main-content{ margin: 0px 30px !important } .side-by-side-button { display: inline-block; margin-right: 10px; }
+      .content-wrapper { max-width: 650px !important; margin: 0 auto !important; } .offer-card { max-width: 560px
+      !important; margin: 0 auto !important; } @media only screen and (max-width: 768px) { .mobile-padding {
+      padding-top: 20px !important; padding-bottom: 20px !important; } .mobile-text { font-size: 14px !important;
+      line-height: 20px !important; } .mobile-header { font-size: 20px !important; line-height: 26px !important; }
+      .mobile-footer-text { font-size: 12px !important; line-height: 16px !important; } .content-wrapper { max-width:
+      100% !important; padding: 0 10px !important; } } @media only screen and (max-width: 480px) { .mobile-padding {
+      padding-top: 15px !important; padding-bottom: 15px !important; } .mobile-text { font-size: 13px !important;
+      line-height: 18px !important; } .mobile-header { font-size: 18px !important; line-height: 22px !important; }
+      .mobile-footer-text { font-size: 11px !important; line-height: 14px !important; } .content-wrapper { padding: 0
+      5px !important; } }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f6f6f1" width="750px">
+    <!-- Wrapper for constrained content -->
+    <mj-wrapper css-class="content-wrapper">
+      <!-- Main Content Card -->
+      <mj-section background-color="#f6f6f1" border-radius="8px" padding="24px 16px" css-class="mobile-padding">
+        <mj-column width="100%">
+          <!-- Greeting -->
+          <mj-text font-size="20px" font-weight="700" line-height="24px" css-class="mobile-header" padding-bottom="8px"
+            >Hi there</mj-text
+          >
+          <mj-text font-size="15px" line-height="22px" css-class="mobile-text" padding-bottom="8px">
+            Your first AI-powered review is just three quick steps away:
+          </mj-text>
+          <!-- Steps -->
+          <mj-table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td width="28" valign="top" style="font-size: 20px">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Shape_icon_5_acd360c5e2.png"
+                  width="25"
+                  height="25"
+                  style="display: block"
+                  alt="Edit Icon"
+                />
+              </td>
+              <td style="padding-left: 8px; font-size: 15px; line-height: 22px"><b>Edit some code</b> in your IDE.</td>
+            </tr>
+            <tr>
+              <td colspan="2" height="10"></td>
+            </tr>
+            <tr>
+              <td width="28" valign="top" style="font-size: 20px">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Shape_icon_6_18b2ce2332.png"
+                  width="25"
+                  height="25"
+                  style="display: block"
+                  alt="Edit Icon"
+                />
+              </td>
+              <td style="padding-left: 8px; font-size: 15px; line-height: 22px"><b>Commit</b> the change with Git.</td>
+            </tr>
+            <tr>
+              <td colspan="2" height="10"></td>
+            </tr>
+            <tr>
+              <td width="28" valign="top" style="font-size: 20px">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Shape_icon_7_ef45d171b6.png"
+                  width="25"
+                  height="25"
+                  style="display: block"
+                  alt="Edit Icon"
+                />
+              </td>
+              <td style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                When prompted, <b>"Start a review?"</b>, click <b>"Yes."</b>
+              </td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+
+      <!-- Begin highlighted inner card section -->
+      <mj-section background-color="#EEEEE3" border-radius="8px" padding="16px" css-class="main-content">
+        <mj-column>
+          <mj-text font-size="15px" line-height="22px" css-class="mobile-text" padding-bottom="8px">
+            CodeRabbit instantly scans your diff and posts feedback in the sidebar—helping you:
+          </mj-text>
+          <mj-table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td width="20" valign="middle" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto"
+                  alt="Bullet"
+                />
+              </td>
+              <td style="padding-left: 8px; font-size: 15px; line-height: 22px">Catch bugs before they ship</td>
+            </tr>
+            <td colspan="2" height="8"></td>
+            <tr>
+              <td width="20" valign="middle" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto"
+                  alt="Bullet"
+                />
+              </td>
+              <td style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                Polish code quality & best practices
+              </td>
+            </tr>
+            <td colspan="2" height="8"></td>
+            <tr>
+              <td width="20" valign="middle" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto"
+                  alt="Bullet"
+                />
+              </td>
+              <td style="padding-left: 8px; font-size: 15px; line-height: 22px">Save time on back-and-forth reviews</td>
+            </tr>
+          </mj-table>
+
+          <mj-text font-size="15px" line-height="22px" font-weight="700" css-class="mobile-text" padding-bottom="4px">
+            Need more control?
+          </mj-text>
+          <mj-table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td width="20" valign="top" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto; margin-top: 4px"
+                  alt="Bullet"
+                />
+              </td>
+              <td valign="top" style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                Choose any <b>base branch</b> from the sidebar before you start.
+              </td>
+            </tr>
+            <td colspan="2" height="8"></td>
+            <tr>
+              <td width="20" valign="top" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto; margin-top: 4px"
+                  alt="Bullet"
+                />
+              </td>
+              <td valign="top" style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                Decide whether to review <b>all changes, committed changes, or uncommitted</b> changes.
+              </td>
+            </tr>
+            <td colspan="2" height="8"></td>
+            <tr>
+              <td width="20" valign="top" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto; margin-top: 4px"
+                  alt="Bullet"
+                />
+              </td>
+              <td valign="top" style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                Preview the file list; stash or adjust if you want a tighter scope.
+              </td>
+            </tr>
+            <td colspan="2" height="8"></td>
+            <tr>
+              <td width="20" valign="top" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto; margin-top: 4px"
+                  alt="Bullet"
+                />
+              </td>
+              <td valign="top" style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                Start or cancel a review with a single click, then browse comments as soon as they land.
+              </td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <!-- End highlighted inner card section -->
+
+      <!-- Docs link -->
+      <mj-section background-color="#F6F6F1" padding="0 16px 8px 16px">
+        <mj-column>
+          <mj-text font-size="15px" line-height="22px" css-class="mobile-text">
+            Need more details? Our
+            <a href="https://docs.coderabbit.ai/" style="color: #c93f00; text-decoration: none; font-weight: 600"
+              >extension docs</a
+            >
+            are always handy.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Team signature -->
+      <mj-section background-color="#F6F6F1" padding="0 16px 8px 16px">
+        <mj-column>
+          <mj-text font-size="15px" line-height="22px" font-weight="500" css-class="mobile-text">
+            The CodeRabbit Team
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

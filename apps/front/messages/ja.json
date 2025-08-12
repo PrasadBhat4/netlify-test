@@ -1,0 +1,17 @@
+{
+  "LocaleSwitcher": {
+    "label": "言語",
+    "en": "English",
+    "fr": "Français",
+    "ja": "日本語"
+  },
+  "Blog": {
+    "Filters": {
+      "all": "すべて",
+      "announcements": "お知らせ",
+      "featured": "おすすめ",
+      "popular": "人気",
+      "product": "製品"
+    }
+  }
+}

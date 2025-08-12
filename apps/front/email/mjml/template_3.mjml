@@ -1,0 +1,163 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all font-family="Work Sans, Helvetica, Arial, sans-serif" />
+      <mj-text font-size="16px" color="#000000" line-height="24px" />
+    </mj-attributes>
+    <mj-font name="Work Sans" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" />
+    <mj-style>
+      .main-content{ margin: 0px 30px !important } .side-by-side-button { display: inline-block; margin-right: 10px; }
+      .content-wrapper { max-width: 650px !important; margin: 0 auto !important; } .offer-card { max-width: 560px
+      !important; margin: 0 auto !important; } @media only screen and (max-width: 768px) { .mobile-padding {
+      padding-top: 20px !important; padding-bottom: 20px !important; } .mobile-text { font-size: 14px !important;
+      line-height: 20px !important; } .mobile-header { font-size: 20px !important; line-height: 26px !important; }
+      .mobile-footer-text { font-size: 12px !important; line-height: 16px !important; } .content-wrapper { max-width:
+      100% !important; padding: 0 10px !important; } } @media only screen and (max-width: 480px) { .mobile-padding {
+      padding-top: 15px !important; padding-bottom: 15px !important; } .mobile-text { font-size: 13px !important;
+      line-height: 18px !important; } .mobile-header { font-size: 18px !important; line-height: 22px !important; }
+      .mobile-footer-text { font-size: 11px !important; line-height: 14px !important; } .content-wrapper { padding: 0
+      5px !important; } }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f6f6f1" width="750px">
+    <!-- Wrapper for constrained content -->
+    <mj-wrapper css-class="content-wrapper">
+      <!-- Main Content Card -->
+      <mj-section background-color="#f6f6f1" border-radius="8px" padding="24px 16px" css-class="mobile-padding">
+        <mj-column width="100%">
+          <!-- Greeting -->
+          <mj-text font-size="20px" font-weight="700" line-height="24px" css-class="mobile-header" padding-bottom="8px"
+            >Hi there</mj-text
+          >
+          <mj-text font-size="15px" line-height="22px" css-class="mobile-text" padding-bottom="8px">
+            You've seen what local AI code reviews can do for you. Now, imagine that power for your whole team!
+            CodeRabbit's AI reviews are even more effective when used collaboratively; set it up for your entire
+            organization (such as your GitHub organization) to improve collective code quality.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Begin highlighted inner card section -->
+      <mj-section background-color="#EEEEE3" border-radius="8px" padding="16px" css-class="main-content">
+        <mj-column>
+          <mj-text font-size="15px" line-height="22px" font-weight="700" css-class="mobile-text" padding-bottom="4px">
+            Why install CodeRabbit centrally?
+          </mj-text>
+          <mj-text font-size="15px" line-height="22px" css-class="mobile-text" padding-bottom="8px">
+            While the IDE extension is excellent for personal productivity, installing CodeRabbit on your repository can
+            cut code review time & bugs in half, instantly for your entire team.
+          </mj-text>
+
+          <mj-table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td width="20" valign="top" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto; margin-top: 4px"
+                  alt="Bullet"
+                />
+              </td>
+              <td valign="top" style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                <b> CodeRabbit Chat:</b> Get instant, AI-powered answers and suggestions directly within your review
+                process.
+              </td>
+            </tr>
+            <td colspan="2" height="8"></td>
+            <tr>
+              <td width="20" valign="top" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto; margin-top: 4px"
+                  alt="Bullet"
+                />
+              </td>
+              <td valign="top" style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                <b>Learnings:</b> CodeRabbit identifies patterns and common issues in your codebase, providing
+                actionable insights for continuous improvement.
+              </td>
+            </tr>
+            <td colspan="2" height="8"></td>
+            <tr>
+              <td width="20" valign="top" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto; margin-top: 4px"
+                  alt="Bullet"
+                />
+              </td>
+              <td valign="top" style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                <b>Knowledge Bases:</b> Integrate your team's existing documentation and best practices, allowing
+                CodeRabbit to leverage this information in its reviews.
+              </td>
+            </tr>
+            <td colspan="2" height="8"></td>
+            <tr>
+              <td width="20" valign="top" style="text-align: center">
+                <img
+                  src="https://victorious-bubble-f69a016683.media.strapiapp.com/Group_1686552786_f90a32655f.png"
+                  width="16"
+                  height="16"
+                  style="display: block; margin-left: auto; margin-right: auto; margin-top: 4px"
+                  alt="Bullet"
+                />
+              </td>
+              <td valign="top" style="padding-left: 8px; font-size: 15px; line-height: 22px">
+                <b>Automated DocString/Unit Test Generation: </b>CodeRabbit can automatically suggest and generate
+                documentation and unit tests, saving your team valuable time.
+              </td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <!-- End highlighted inner card section -->
+
+      <!-- Docs link -->
+
+      <mj-section background-color="#F6F6F1" padding="20px 0px 8px 0px">
+        <mj-column>
+          <mj-text font-size="15px" line-height="22px" css-class="mobile-text">
+            Ready to see how CodeRabbit can transform your team's code quality?
+          </mj-text>
+          <mj-text align="left">
+            <a
+              href="https://docs.coderabbit.ai/getting-started/quickstart/"
+              class="side-by-side-button"
+              style="
+                background-color: #ff570a;
+                color: white;
+                border-radius: 38px;
+                font-family: Scandia-Bold, Helvetica, Arial, sans-serif;
+                font-size: 10px;
+                font-weight: 700;
+                padding: 5px 16px;
+                text-decoration: none;
+                display: inline-block;
+                letter-spacing: 1px;
+              "
+            >
+              Get Started Today <span style="color: #000000; margin-left: 5px">→</span>
+            </a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Team signature -->
+      <mj-section background-color="#F6F6F1" padding="0">
+        <mj-column>
+          <mj-text font-size="15px" line-height="22px" font-weight="500" css-class="mobile-text">
+            Keep up the great work!
+          </mj-text>
+          <mj-text font-size="15px" line-height="22px" font-weight="500" css-class="mobile-text">
+            The CodeRabbit Team
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

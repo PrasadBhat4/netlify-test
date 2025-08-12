@@ -1,0 +1,32 @@
+node_modules
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# next.js
+.next/
+out/
+build
+
+# misc
+.DS_Store
+*.pem
+
+.git
+.husky
+.yarn
+.vscode
+.gitignore
+.dockerignore
+
+# turbo
+.turbo
+
+README.md
+infra
+
+**/Dockerfile*
+compose*.yml
+dockerfiles
+
+.env*

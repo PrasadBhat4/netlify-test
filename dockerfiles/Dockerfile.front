@@ -1,0 +1,41 @@
+FROM node:18-alpine3.18 AS base
+
+RUN apk update && apk add --no-cache libc6-compat
+
+RUN yarn global add turbo
+
+##########################################################################################
+# BUILDER
+##########################################################################################
+
+FROM base AS builder
+
+WORKDIR /app
+
+COPY . .
+
+RUN turbo prune --scope=@coderabbit-website/front --docker
+
+##########################################################################################
+# INSTALLER
+##########################################################################################
+
+FROM base AS installer
+
+ARG NEXT_PUBLIC_STRAPI_BASE_URL
+ENV NEXT_PUBLIC_STRAPI_BASE_URL=${NEXT_PUBLIC_STRAPI_BASE_URL}
+
+RUN apk update && apk add --no-cache libc6-compat
+
+WORKDIR /app
+
+COPY --from=builder /app/out/json/ .
+COPY --from=builder /app/out/yarn.lock ./yarn.lock
+
+RUN yarn install
+
+COPY --from=builder /app/ .
+
+RUN yarn run build --scope=@coderabbit-website/front
+
+CMD ["yarn", "start", "--filter=@coderabbit-website/front"]

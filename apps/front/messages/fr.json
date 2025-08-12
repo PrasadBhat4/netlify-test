@@ -1,0 +1,17 @@
+{
+  "LocaleSwitcher": {
+    "label": "Langue",
+    "en": "English",
+    "fr": "Français",
+    "ja": "日本語"
+  },
+  "Blog": {
+    "Filters": {
+      "all": "Tous",
+      "announcements": "Annonces",
+      "featured": "Mis en avant",
+      "popular": "Populaire",
+      "product": "Produit"
+    }
+  }
+}

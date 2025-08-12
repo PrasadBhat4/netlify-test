@@ -1,0 +1,35 @@
+query SlugPostsByPublication($host: String!, $first: Int!, $after: String) {
+  publication(host: $host) {
+    title
+    descriptionSEO
+    preferences {
+      logo
+    }
+    posts(first: $first, after: $after) {
+      edges {
+        node {
+          slug
+          title
+          content {
+            html
+          }
+          tags {
+            name
+          }
+          author {
+            name
+          }
+          coverImage {
+            url
+          }
+          publishedAt
+          updatedAt
+        }
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+}

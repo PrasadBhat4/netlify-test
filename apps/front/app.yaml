@@ -1,0 +1,24 @@
+runtime: nodejs
+
+env: flex
+
+runtime_config:
+  operating_system: 'ubuntu22'
+  runtime_version: '18'
+instance_class: F2
+
+service: website
+
+handlers:
+  - url: /.*
+    script: auto
+    secure: always
+
+env_variables:
+  NEXT_PUBLIC_STRAPI_BASE_URL: 'https://victorious-bubble-f69a016683.strapiapp.com'
+  NEXT_PUBLIC_HASHNODE_GQL_ENDPOINT: 'https://gql.hashnode.com'
+  NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST: 'coderabbit-blog.hashnode.dev'
+  NEXT_PUBLIC_GA_ID: 'G-ZNFMECQD2S'
+  NEXT_PUBLIC_HUBSPOT_PORTAL_ID: '43613284'
+  NEXT_PUBLIC_HUBSPOT_FORM_GUID: 65234f94-1d9f-43b1-905b-a17a76adff06
+  NEXT_PUBLIC_HUBSPOT_CONTACT_FORM_GUID: '39e2a774-ac62-48dc-9c61-023d66f6365c'
