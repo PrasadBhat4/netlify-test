@@ -60,7 +60,8 @@ export const parseMetadata = ({
     parentMetadata?.description ||
     'AI-first pull request reviewer with context-aware feedback, line-by-line code suggestions, and real-time chat.';
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://netlify-deploy-testing.netlify.app';
-  const fallbackImage = getStrapiMedia(pageMetadata?.og_image?.data?.attributes.url) || `${baseUrl}/images/shapes/rabbit-xl.png`;
+  const fallbackImage =
+    getStrapiMedia(pageMetadata?.og_image?.data?.attributes.url) || `${baseUrl}/images/shapes/rabbit-xl.png`;
 
   return {
     ...parentMetadata,
