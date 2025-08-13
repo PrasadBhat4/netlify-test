@@ -17,17 +17,20 @@ export async function generateMetadata(__: unknown, parent: ResolvingMetadata): 
   } catch (error) {
     // Fallback metadata when Strapi fails
     const parentMetadata = await parent;
-    return parseMetadata({ 
+    return parseMetadata({
       pageMetadata: {
         title: 'Our Customers | CodeRabbit',
-        description: 'Discover how leading teams use CodeRabbit AI to transform their code review process with intelligent, context-aware feedback.',
+        description:
+          'Discover how leading teams use CodeRabbit AI to transform their code review process with intelligent, context-aware feedback.',
         og_title: 'Our Customers | CodeRabbit',
-        og_description: 'Discover how leading teams use CodeRabbit AI to transform their code review process with intelligent, context-aware feedback.',
+        og_description:
+          'Discover how leading teams use CodeRabbit AI to transform their code review process with intelligent, context-aware feedback.',
         og_url: 'https://www.coderabbit.ai/customers',
         twitter_title: 'Our Customers | CodeRabbit',
-        twitter_description: 'Discover how leading teams use CodeRabbit AI to transform their code review process with intelligent, context-aware feedback.',
-      } as any, 
-      parentMetadata 
+        twitter_description:
+          'Discover how leading teams use CodeRabbit AI to transform their code review process with intelligent, context-aware feedback.',
+      } as any,
+      parentMetadata,
     });
   }
 }

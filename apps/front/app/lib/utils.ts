@@ -55,7 +55,10 @@ export const parseMetadata = ({
 }): Metadata => {
   // Fallback values for when Strapi data is not available
   const fallbackTitle = pageMetadata?.title || parentMetadata?.title || 'AI Code Reviews | CodeRabbit | Try for Free';
-  const fallbackDescription = pageMetadata?.description || parentMetadata?.description || 'AI-first pull request reviewer with context-aware feedback, line-by-line code suggestions, and real-time chat.';
+  const fallbackDescription =
+    pageMetadata?.description ||
+    parentMetadata?.description ||
+    'AI-first pull request reviewer with context-aware feedback, line-by-line code suggestions, and real-time chat.';
   const fallbackImage = getStrapiMedia(pageMetadata?.og_image?.data?.attributes.url) || '/images/logo-orange.svg';
 
   return {
