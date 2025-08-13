@@ -53,30 +53,35 @@ export const parseMetadata = ({
   pageMetadata: SiteMetadata;
   parentMetadata: ResolvedMetadata;
 }): Metadata => {
+  // Fallback values for when Strapi data is not available
+  const fallbackTitle = pageMetadata?.title || parentMetadata?.title || 'AI Code Reviews | CodeRabbit | Try for Free';
+  const fallbackDescription = pageMetadata?.description || parentMetadata?.description || 'AI-first pull request reviewer with context-aware feedback, line-by-line code suggestions, and real-time chat.';
+  const fallbackImage = getStrapiMedia(pageMetadata?.og_image?.data?.attributes.url) || '/images/logo-orange.svg';
+
   return {
     ...parentMetadata,
-    title: pageMetadata?.title ?? 'Coderabbit',
-    description: pageMetadata?.description ?? 'CodeRabbit',
+    title: fallbackTitle,
+    description: fallbackDescription,
     keywords: [...(pageMetadata?.keywords || '').split(',')],
     alternates: { ...parentMetadata.alternates, canonical: pageMetadata?.canonical },
     openGraph: {
       ...parentMetadata.openGraph,
-      title: pageMetadata?.og_title ?? '',
-      description: pageMetadata?.og_description ?? '',
-      siteName: pageMetadata?.og_sitename ?? '',
+      title: pageMetadata?.og_title || fallbackTitle,
+      description: pageMetadata?.og_description || fallbackDescription,
+      siteName: pageMetadata?.og_sitename || parentMetadata?.openGraph?.siteName || 'CodeRabbit',
       locale: pageMetadata?.og_locale ?? 'en_US',
-      url: pageMetadata?.og_url ?? 'https://www.coderabbit.ai',
+      url: pageMetadata?.og_url || parentMetadata?.openGraph?.url || 'https://www.coderabbit.ai',
       type: pageMetadata?.og_type ?? 'website',
-      images: [getStrapiMedia(pageMetadata?.og_image?.data?.attributes.url)],
+      images: [fallbackImage].filter(Boolean),
     },
     twitter: {
       ...parentMetadata.twitter,
       card: pageMetadata?.twitter_card ?? 'summary_large_image',
-      title: pageMetadata?.twitter_title ?? '',
-      description: pageMetadata?.twitter_description ?? '',
-      site: pageMetadata?.twitter_site,
-      creator: pageMetadata?.twitter_creator,
-      images: [getStrapiMedia(pageMetadata?.twitter_image?.data?.attributes.url)],
+      title: pageMetadata?.twitter_title || fallbackTitle,
+      description: pageMetadata?.twitter_description || fallbackDescription,
+      site: pageMetadata?.twitter_site || parentMetadata?.twitter?.site || '@coderabbitai',
+      creator: pageMetadata?.twitter_creator || parentMetadata?.twitter?.creator || '@coderabbitai',
+      images: [getStrapiMedia(pageMetadata?.twitter_image?.data?.attributes.url) || fallbackImage].filter(Boolean),
     },
   } as unknown as Metadata;
 };
